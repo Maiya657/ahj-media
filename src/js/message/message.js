@@ -16,7 +16,7 @@ export class Message {
               resolve(data.coords);
             },
             (err) => {
-              console.warn(err);
+              console.warn(`ERROR(${err.code}): ${err.message}`);
               this.modal.getCoordinatsFromUser().then(resolve).catch(reject);
             },
             { enableHighAccuracy: true, timeout: 5000 },
