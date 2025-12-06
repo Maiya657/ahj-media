@@ -1,0 +1,138 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  background-color: #f9f9f9;
+}
+
+#root {
+  width: 360px;
+  padding: 10px 0;
+}
+
+.timeline-container {
+  display: block;
+}
+
+.form {
+  width: 100%;
+  display: flex;
+  ;
+}
+
+textarea {
+  width: 85%;
+}
+
+.message-timeline {
+  display: flex;
+  flex-direction: row;
+}
+
+.message-timeline:first-child .message-timeline-item {
+  margin-top: 8px;
+}
+
+.message-timeline:first-child .message-timeline-item::before {
+  top: -3px;
+}
+
+.message-timeline-item {
+  width: 5px;
+  position: relative;
+  border-left: 1px solid #acacac;
+  border-right: 1px solid #acacac;
+  margin: 0 20px;
+}
+
+.message-timeline-item::before {
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  border-radius: 12px;
+  border: 1px solid #acacac;
+  background-color: #f9f9f9;
+  content: "";
+  left: -5px;
+  top: 5px;
+}
+
+.message {
+  width: 100%;
+  border: 1px solid #acacac;
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.message-date {
+  font-size: 0.7em;
+  color: #acacac;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.message-text {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  word-wrap: break-word;
+}
+
+.message-geo {
+  font-size: 10px;
+  color: #acacac;
+}
+
+.send {
+  width: 15%;
+  margin-left: 10px;
+}
+
+.modal-overlay {
+  position: fixed;
+  content: "";
+  inset: 0;
+  background-color: rgba(0, 0, 0, .5);
+  z-index: 1000;
+}
+
+.modal {
+  width: 360px;
+  position: fixed;
+  background-color: white;
+  border: 1px solid #acacac;
+  border-radius: 5px;
+  top: 50%;
+  left: 50%;
+  padding-right: 20px;
+  padding-left: 20px;
+  transform: translate(-50%, -50%);
+  z-index: 1001;
+}
+
+.text-field {
+  display: flex;
+  flex-direction: column;
+}
+
+#modal-coordinates {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding: 10px;
+}
+
+.modal-footer {
+  display: flex;
+  flex-direction: row-reverse;
+  margin-bottom: 10px;
+}
+
+.btn-cancel {
+  margin-left: 5px;
+  padding: 7px;
+}
+
+.btn-submit {
+  padding: 7px;
+}
