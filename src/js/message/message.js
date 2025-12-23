@@ -14,7 +14,7 @@ export class Message {
     }
 
     this.geo = await new Promise((resolve, reject) => {
-      navigator.geolocation.getCurrentPosition(resolve, reject, {
+      navigator.geolocation.getCurrentPosition((value) => resolve(value.coords), reject, {
         enableHighAccuracy: true,
         timeout: 5000,
       });
